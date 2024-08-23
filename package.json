@@ -13,7 +13,8 @@
     "build-ai": "webpack --mode production --config webpack.tank.config.js",
     "test": "mocha -r './tsnode.js' test/**/*.test.ts",
     "commit": "npx git-cz",
-    "version": "conventional-changelog -p kaboom -i CHANGELOG.md -s && git add CHANGELOG.md"
+    "version": "conventional-changelog -p kaboom -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "homepage": "https://github.com/ttate10/kaboom#readme",
   "dependencies": {
     "@types/npm": "^2.0.31",
+    "gh-pages": "^6.1.1",
     "jsbattle-engine": "^3.4.0"
   },
   "devDependencies": {
